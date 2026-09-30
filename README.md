@@ -9,6 +9,9 @@ let(name, "Moss");
 rprintf("hello {name}, you are {age} years old\n");
 ```
 
+<img width="3072" height="3172" alt="Screenshot 2026-09-30 at 12-33-18 rprintf demo" src="https://github.com/user-attachments/assets/d07d536c-c30a-48c0-b2bf-611e60457429" />
+
+
 ## Creating and Tracking Variables
 
 C variable names are erased by the compiler. After compilation, a variable is just a stack offset like `[rbp-4]`. There is no runtime table mapping names to values unless you build one explicitly. To bridge this gap, `rprintf` provides two macros that use the `#` preprocessor stringification operator to capture variable names and snapshot their values into a central registry:
